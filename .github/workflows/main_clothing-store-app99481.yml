@@ -32,5 +32,5 @@ jobs:
         app-name: clothing-store-app99481
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D1E1C16AD9DD472E8AEAC4DF1D438615 }}
-        package: ${{ github.workspace }}/target/*.war
+        package: ${{ github.workspace }}/target/*.jar
 
