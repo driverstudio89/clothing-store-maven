@@ -26,13 +26,13 @@ public class HomeController {
         model.addAttribute("lastProducts", lastProducts);
 
 
-        return "index";
+        return "/index";
     }
 
     @GetMapping("/about")
     public String viewAbout() {
 
-        return "about";
+        return "/about";
     }
 
 

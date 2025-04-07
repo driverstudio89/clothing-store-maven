@@ -44,7 +44,7 @@ public class UserController {
 
     @GetMapping("/users/register")
     public String viewRegister() {
-        return "register";
+        return "/register";
     }
 
     @PostMapping("/users/register")
@@ -75,14 +75,14 @@ public class UserController {
 
     @GetMapping("/users/login")
     public String viewLogin() {
-        return "login";
+        return "/login";
     }
 
     @GetMapping("/users/login-error")
     public String viewLoginError(Model model) {
         model.addAttribute("wrongCredentials", true);
 
-        return "login";
+        return "/login";
     }
 
     @GetMapping("/users/profile")
@@ -100,7 +100,7 @@ public class UserController {
 
         model.addAttribute("allOrders", allOrders);
         System.out.println();
-        return "user-orders";
+        return "/user-orders";
     }
 
     @Transactional
@@ -118,7 +118,7 @@ public class UserController {
 
         model.addAttribute("favorites", favorites);
         System.out.println();
-        return "favorites";
+        return "/favorites";
     }
 
     @DeleteMapping("/users/remove-favorite/{id}")
